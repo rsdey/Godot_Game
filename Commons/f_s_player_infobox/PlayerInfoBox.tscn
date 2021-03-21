@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+
+[node name="PlayerInfoBox" type="ColorRect"]
+margin_left = 200.0
+margin_top = 540.0
+margin_right = 800.0
+margin_bottom = 840.0
+color = Color( 0.34902, 0.501961, 0.180392, 0.411765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Welcome Greeting" type="RichTextLabel" parent="."]
+margin_top = 25.0
+margin_right = 600.0
+margin_bottom = 75.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Welcome to the Game[/center]"
+text = "Welcome to the Game"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Name Set" type="ColorRect" parent="."]
+margin_left = 50.0
+margin_top = 80.0
+margin_right = 250.0
+margin_bottom = 230.0
+color = Color( 0.462745, 0.815686, 0.988235, 0.290196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Name Set"]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 175.0
+margin_bottom = 50.0
+bbcode_enabled = true
+bbcode_text = "[center]Name[/center]"
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LineEdit" type="LineEdit" parent="Name Set"]
+margin_left = 25.0
+margin_top = 60.0
+margin_right = 175.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Age Set" type="ColorRect" parent="."]
+margin_left = 350.0
+margin_top = 80.0
+margin_right = 550.0
+margin_bottom = 230.0
+color = Color( 0.462745, 0.815686, 0.988235, 0.290196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Age Set"]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 175.0
+margin_bottom = 50.0
+bbcode_enabled = true
+bbcode_text = "[center]Age[/center]"
+text = "Age"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LineEdit" type="LineEdit" parent="Age Set"]
+margin_left = 25.0
+margin_top = 60.0
+margin_right = 125.0
+margin_bottom = 110.0
+
+[node name="VScrollBar" type="VScrollBar" parent="Age Set"]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 170.0
+margin_bottom = 110.0
+min_value = 13.0
+max_value = 65.0
+step = 1.0
+value = 13.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 250.0
+margin_right = 400.0
+margin_bottom = 290.0
+text = "BEGIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="value_changed" from="Age Set/VScrollBar" to="." method="_on_Age_VScrollBar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

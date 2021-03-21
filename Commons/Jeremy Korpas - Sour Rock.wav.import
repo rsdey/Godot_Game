@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Jeremy Korpas - Sour Rock.wav-9b159080f60d60e1f89a2e32d720f68f.sample"
+
+[deps]
+
+source_file="res://Commons/Jeremy Korpas - Sour Rock.wav"
+dest_files=[ "res://.import/Jeremy Korpas - Sour Rock.wav-9b159080f60d60e1f89a2e32d720f68f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

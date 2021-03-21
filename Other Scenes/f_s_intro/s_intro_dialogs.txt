@@ -1,0 +1,3 @@
+Welcome to the game!
+If you want to clear progress, click the button on left.
+Please enter your name and age before proceeding.

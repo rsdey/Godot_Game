@@ -1,0 +1,215 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Other Scenes/f_s_intro/s_intro.gd" type="Script" id=1]
+[ext_resource path="res://Commons/r_dfd_button_font.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://images/bkg forest.png" type="Texture" id=3]
+[ext_resource path="res://Commons/f_s_general_dialog/general_dialog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Commons/r_df_button_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://titleFont_.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Commons/f_s_player_infobox/PlayerInfoBox.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="s_intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -993.746
+margin_top = -617.227
+margin_right = 1012.25
+margin_bottom = 695.773
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="background"]
+margin_left = 296.161
+margin_top = 217.616
+margin_right = 1849.16
+margin_bottom = 532.616
+custom_fonts/normal_font = ExtResource( 6 )
+custom_constants/shadow_as_outline = 20
+text = "IT IS YOU
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clear_progress_button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -150.0
+margin_right = 356.0
+margin_bottom = -50.0
+custom_fonts/font = SubResource( 1 )
+text = "Clear Progress"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skip_intro_button" type="Button" parent="."]
+anchor_left = 0.828051
+anchor_top = 0.879802
+anchor_right = 0.983328
+anchor_bottom = 0.972
+margin_left = -19.2284
+margin_top = -20.1863
+margin_right = -17.3601
+margin_bottom = -19.76
+custom_fonts/font = SubResource( 2 )
+text = "Skip Intro"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="DialogBox" parent="." instance=ExtResource( 4 )]
+
+[node name="PlayerInfoBox" type="ColorRect" parent="."]
+self_modulate = Color( 0.741176, 0.780392, 0.811765, 1 )
+margin_left = 620.691
+margin_top = 353.653
+margin_right = 1367.69
+margin_bottom = 803.653
+color = Color( 0.698039, 0.741176, 0.65098, 0.411765 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Welcome Greeting" type="RichTextLabel" parent="PlayerInfoBox"]
+margin_left = 9.9707
+margin_top = 28.1422
+margin_right = 746.971
+margin_bottom = 99.1422
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]Welcome to the Game[/center]"
+text = "Welcome to the Game"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Name Set" type="ColorRect" parent="PlayerInfoBox"]
+margin_left = 45.0
+margin_top = 136.0
+margin_right = 293.0
+margin_bottom = 288.0
+color = Color( 0.462745, 0.815686, 0.988235, 0.290196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerInfoBox/Name Set"]
+margin_left = 13.6332
+margin_top = 16.7551
+margin_right = 212.633
+margin_bottom = 66.7551
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]Name[/center]"
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LineEdit" type="LineEdit" parent="PlayerInfoBox/Name Set"]
+margin_left = 15.0
+margin_top = 76.0
+margin_right = 221.0
+margin_bottom = 128.0
+placeholder_alpha = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Age Set" type="ColorRect" parent="PlayerInfoBox"]
+margin_left = 374.0
+margin_top = 132.0
+margin_right = 644.0
+margin_bottom = 291.0
+color = Color( 0.462745, 0.815686, 0.988235, 0.290196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerInfoBox/Age Set"]
+margin_left = 44.0
+margin_top = 8.53046
+margin_right = 202.0
+margin_bottom = 75.5305
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]Age[/center]"
+text = "Age"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LineEdit" type="LineEdit" parent="PlayerInfoBox/Age Set"]
+margin_left = 27.0
+margin_top = 82.0
+margin_right = 180.0
+margin_bottom = 130.0
+
+[node name="VScrollBar" type="VScrollBar" parent="PlayerInfoBox/Age Set"]
+margin_left = 194.682
+margin_top = 73.8179
+margin_right = 217.682
+margin_bottom = 132.818
+min_value = 13.0
+max_value = 65.0
+step = 1.0
+value = 13.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="PlayerInfoBox"]
+margin_left = 244.0
+margin_top = 359.0
+margin_right = 382.0
+margin_bottom = 399.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 6 )
+text = "Start !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="time_for_story_intro" from="PlayerInfoBox" to="." method="_on_PlayerInfoBox_time_for_story_intro"]
+[connection signal="value_changed" from="PlayerInfoBox/Age Set/VScrollBar" to="PlayerInfoBox" method="_on_Age_VScrollBar_value_changed"]
+[connection signal="pressed" from="PlayerInfoBox/Button" to="PlayerInfoBox" method="_on_Button_pressed"]
