@@ -8,7 +8,7 @@ var runtime_data = {
 	"Over Question 2" : false,
 	"Over Question 3" : false,
 	"Over Question 4" : false,
-	"Over Question 5" : false
+	"Over Question 5" : true
 }
 
 var player_details: Dictionary
